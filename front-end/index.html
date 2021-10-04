@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8"/>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <link rel="stylesheet" href="../Styles/styles.css"/> 
+
+  <title>My favorite Animes</title>
+</head>
+<body>
+  <header>
+    <nav class="navbar">
+      <h1>My favorite Animes</h1>
+    </nav>
+  </header>  
+  <div class="container">
+    <div class="input-bar">
+      <nav class="newContentNav" id="newContentNav">
+        <p>
+          <img src="../Images/contente.png" alt="Add New Content" width="50" />
+          Add new content Here!
+        </p>
+        </br>
+        <form onSubmit="submitForm(event)" id="form" class="newContent">
+          <label for="title">
+            Title :
+            <input class="title" required id="title" placeholder="Anime Title" type="text">
+          </label>
+          </br>
+          <label for="imageUrl">
+            Image URL :
+            <input class="imageUrl" required id="imageUrl" placeholder="Image Url" type="text">
+          </label>
+          </br>
+          <label for="gender">
+            Gender :
+            <input class="gender" required id="gender" placeholder="Gender" type="text">
+          </label>
+          </br>
+          <label for="score">
+            Score :
+            <input class="score" required id="score" placeholder="Score" type="number" min="01" max="10">
+          </label>
+          </br>
+          <button type="submit" class="addContent" id="addContent"> Add Content </button>
+        </form>
+      </nav>
+    </div>
+    <div id="cardBox" class="cardBox">
+
+
+    </div>
+  </div>
+
+    <footer>
+      <nav class="footerNav">
+          <img class="author" src="../Images/everton.jpg" width=100 alt="Everton DOM">
+          <p>Everton de Oliveira</p>
+      </nav>
+    </footer>
+  
+    <script type="text/javascript" src="index.js"></script>
+  </body>
+</html> 
