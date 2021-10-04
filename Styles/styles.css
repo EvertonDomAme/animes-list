@@ -1,20 +1,31 @@
-*{
-  padding:0;
-  margin:0;
+* {
+  padding: 0;
+  margin: 0;
   box-sizing: border-box;
 }
 body {
+  background: #304352; /* fallback for old browsers */
+  background: -webkit-linear-gradient(
+    to top,
+    #d7d2cc,
+    #304352
+  ); /* Chrome 10-25, Safari 5.1-6 */
+  background: linear-gradient(
+    to top,
+    #d7d2cc,
+    #304352
+  ); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 header {
-  width:100%;
+  width: 100%;
   z-index: 100;
 }
 .navbar {
-  background-color:black;
+  background-color: black;
   width: 100%;
   height: 38px;
   display: flex;
@@ -23,30 +34,60 @@ header {
   color: white;
 }
 /* --------------------------- */
-footer{
+footer {
   z-index: 99;
 }
-.footerNav {
-  width: 100%;
-  height: 120px;
-  background-color:black;
+
+.circle {
+  position: relative;
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: #ccc;
   display: flex;
   justify-content: center;
   align-items: center;
-  color: white;
 }
-.container{
-  margin:5px;
+.logo {
+  position: absolute;
+  width: 150px;
+  height: 150px;
+  background-image: url(../images/everton.jpg);
+  background-size: cover;
+  border-radius: 50%;
+  filter: grayscale();
+}
+.text {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  animation: rotateText 10% linear infinite;
+}
+@keyframes rotateText {
+  0% {
+    transform: rotate(360deg);
+  }
+  100% {
+  }
+}
+.text span {
+  position: absolute;
+  left: 50%;
+  font-size: 1.2em;
+  transform-origin: 0 100px;
+}
+
+.container {
+  margin: 5px;
   box-sizing: border-box;
-  width:100%;
-  height:80%;
+  width: 100%;
+  height: 80%;
   display: flex;
   align-items: center;
   flex-direction: row;
-  border: 1px solid red;
 }
 .input-bar {
-  justify-self:flex-start;
+  justify-self: flex-start;
   background-color: rgba(27, 0, 27, 0.863);
   color: rgb(0, 255, 255);
   border-radius: 15px;
@@ -67,7 +108,7 @@ footer{
   justify-content: center;
   align-items: center;
   flex-direction: column;
-  font-size:24px;
+  font-size: 24px;
 }
 .input-bar button {
   background-color: rgba(0, 0, 0, 0.89);
@@ -75,10 +116,10 @@ footer{
 }
 
 .newContentNav {
- display: flex;
- justify-content: center;
- align-items: center;
- flex-direction: column;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
 }
 input {
   display: flex;
@@ -124,23 +165,23 @@ input {
   height: 100%;
   font-size: 1.5em;
   font-weight: bold;
-  font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+  font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
 }
 .cardText {
   display: flex;
-  justify-content:center;
+  justify-content: center;
   flex-direction: column;
   width: 75%;
   height: 100%;
   color: white;
 }
-.cardText p{
+.cardText p {
   margin: 5px;
   padding: 5px;
 }
 
 #cardScore {
-  color:rgb(0, 255, 0);
+  color: rgb(0, 255, 0);
   padding: 5px;
   display: flex;
   justify-content: center;
@@ -163,7 +204,7 @@ input {
   display: flex;
   justify-content: center;
   align-items: center;
-  flex-direction:row;
+  flex-direction: row;
 }
 
 .cardChecking {
@@ -185,17 +226,6 @@ input {
   background-color: black;
 }
 
-
-
 .author {
   border-radius: 50%;
 }
-
-
-
-
-
-
-
-
-

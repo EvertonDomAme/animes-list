@@ -2,8 +2,13 @@ const urlApi = 'http://localhost:3000/animes';
 const animes = document.getElementById('cardBox');
 let update = false;
 let idUpdate = 0;
-let btnCheck = document.getElementById('btnCheck');
-let cardCheck = document.querySelector('.card')
+/* let btnCheck = document.getElementById('btnCheck');
+let cardCheck = document.querySelector('.card') */
+const text = document.querySelector('.text');
+text.innerHTML = text.innerText.split("").map(
+  (char, i) => 
+  `<span style="transform:rotate(${i*8.7}deg)">${char}</span>`
+).join("")
 
 const getAnimes = async () => {
   
@@ -67,7 +72,7 @@ const submitForm = async (event) => {
 
     if(result) {
       getAnimes();
-      addToStorage();
+      /* addToStorage(); */
 
     }
 
@@ -101,11 +106,11 @@ const getAnimeById = async (id) => {
   return anime = response.json();
 }
 
-function toggleDone() {
+/* function toggleDone() {
   cardCheck.classList.add('seen');
 }
 
-btnCheck.addEventListener('click', toggleDone);
+btnCheck.addEventListener('click', toggleDone); */
 
 
 const updateAnime = async (id) => {
